@@ -56,3 +56,13 @@ select(bat_dat, 1:5) %>%
 #if you have 5 or 6 operations you want to perform on the same object, useful
 #using pipes tens to reflect your train of thoughts
 # its also easier to read
+
+
+# 'group by' function is useful
+# eg
+bat_dat %>%
+  select(1:4) %>%
+  group_by(Season) %>%
+  summarise(mean_Cg = mean(Chgouldii))
+#succinct way to deal with a complex operation
+
